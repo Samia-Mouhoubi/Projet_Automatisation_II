@@ -129,17 +129,30 @@ public class Exigences {
 		assertEquals(msgActuel, msgAttendu);
 	}
 	
-//	@Test
-//	public void exigence8() throws Exception {
-//		WebDriverManager.chromedriver().setup();
-//		WebDriver driver = new ChromeDriver();
-//		driver.manage().window().maximize();
-//		driver.get("https://tutorialsninja.com/demo/index.php?route=common/home");
-//		Thread.sleep(2000);
-//		
-//		
-//		
-//		driver.quit();
-//	}
-
+	@Test
+	public void exigence8() throws Exception {
+		driver.findElement(By.cssSelector(".list-inline>*:nth-child(2)>a")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector(".dropdown-menu-right>li:nth-child(2)>a")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.id("input-email")).sendKeys("samia.mouhoubi@gmail.com");
+		Thread.sleep(1000);
+		driver.findElement(By.id("input-password")).sendKeys("samiamouhoubi");
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("input[type='submit']")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("#logo>h1>a")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("button[onclick=\"cart.add('43');\"]")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("a[title='Checkout']")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.id("button-payment-address")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("input[type='checkbox']")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.id("button-payment-method")).click();
+		// Impossible de continuer a l'étape suivante, 
+		// impossible d'ajouter une methode de paiement
+	}
 }    

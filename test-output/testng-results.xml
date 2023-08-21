@@ -1,93 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-15T22:05:28 EDT" name="Default suite" finished-at="2023-08-15T22:06:50 EDT" duration-ms="82589">
+  <suite started-at="2023-08-20T20:10:48 EDT" name="Default suite" finished-at="2023-08-20T20:11:12 EDT" duration-ms="24262">
     <groups>
     </groups>
-    <test started-at="2023-08-15T22:05:28 EDT" name="Default test" finished-at="2023-08-15T22:06:50 EDT" duration-ms="82589">
+    <test started-at="2023-08-20T20:10:48 EDT" name="Default test" finished-at="2023-08-20T20:11:12 EDT" duration-ms="24262">
       <class name="test.Exigences">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:05:28 EDT" name="setup" finished-at="2023-08-15T22:05:34 EDT" duration-ms="6259" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.Exigences@173ed316]" started-at="2023-08-20T20:10:48 EDT" name="setup" finished-at="2023-08-20T20:10:55 EDT" duration-ms="6977" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="exigence1()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:05:34 EDT" name="exigence1" finished-at="2023-08-15T22:05:37 EDT" duration-ms="2964" status="PASS">
+        <test-method signature="exigence8()[pri:0, instance:test.Exigences@173ed316]" started-at="2023-08-20T20:10:55 EDT" name="exigence8" finished-at="2023-08-20T20:11:10 EDT" duration-ms="14976" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- exigence1 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:05:37 EDT" name="teardown" finished-at="2023-08-15T22:05:39 EDT" duration-ms="2231" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:05:39 EDT" name="setup" finished-at="2023-08-15T22:05:45 EDT" duration-ms="6035" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="exigence2()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:05:45 EDT" name="exigence2" finished-at="2023-08-15T22:05:48 EDT" duration-ms="2890" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exigence2 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:05:48 EDT" name="teardown" finished-at="2023-08-15T22:05:50 EDT" duration-ms="2235" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:05:50 EDT" name="setup" finished-at="2023-08-15T22:05:56 EDT" duration-ms="5903" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="exigence3()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:05:56 EDT" name="exigence3" finished-at="2023-08-15T22:06:00 EDT" duration-ms="3786" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exigence3 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:06:00 EDT" name="teardown" finished-at="2023-08-15T22:06:02 EDT" duration-ms="2234" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:06:02 EDT" name="setup" finished-at="2023-08-15T22:06:08 EDT" duration-ms="5881" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="exigence4()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:06:08 EDT" name="exigence4" finished-at="2023-08-15T22:06:12 EDT" duration-ms="4053" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exigence4 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:06:12 EDT" name="teardown" finished-at="2023-08-15T22:06:14 EDT" duration-ms="2199" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:06:14 EDT" name="setup" finished-at="2023-08-15T22:06:20 EDT" duration-ms="5867" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="exigence5()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:06:20 EDT" name="exigence5" finished-at="2023-08-15T22:06:25 EDT" duration-ms="4789" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exigence5 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:06:25 EDT" name="teardown" finished-at="2023-08-15T22:06:27 EDT" duration-ms="2259" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:06:27 EDT" name="setup" finished-at="2023-08-15T22:06:33 EDT" duration-ms="6160" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="exigence6()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:06:33 EDT" name="exigence6" finished-at="2023-08-15T22:06:37 EDT" duration-ms="3403" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exigence6 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:06:37 EDT" name="teardown" finished-at="2023-08-15T22:06:39 EDT" duration-ms="2199" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:06:39 EDT" name="setup" finished-at="2023-08-15T22:06:45 EDT" duration-ms="6060" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="exigence7()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:06:45 EDT" name="exigence7" finished-at="2023-08-15T22:06:48 EDT" duration-ms="2899" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exigence7 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.Exigences@f202d6d]" started-at="2023-08-15T22:06:48 EDT" name="teardown" finished-at="2023-08-15T22:06:50 EDT" duration-ms="2208" status="PASS">
+        </test-method> <!-- exigence8 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.Exigences@173ed316]" started-at="2023-08-20T20:11:10 EDT" name="teardown" finished-at="2023-08-20T20:11:12 EDT" duration-ms="2263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

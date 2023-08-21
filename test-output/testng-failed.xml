@@ -5,14 +5,9 @@
     <classes>
       <class name="test.Exigences">
         <methods>
+          <include name="exigence8"/>
           <include name="teardown"/>
-          <include name="exigence5"/>
           <include name="setup"/>
-          <include name="exigence6"/>
-          <include name="exigence4"/>
-          <include name="exigence2"/>
-          <include name="exigence7"/>
-          <include name="exigence3"/>
         </methods>
       </class> <!-- test.Exigences -->
     </classes>
