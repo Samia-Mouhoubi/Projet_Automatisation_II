@@ -2,6 +2,13 @@ package test;
 
 import static org.testng.Assert.assertEquals;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -30,37 +37,91 @@ public class Exigences {
 		driver.quit();
 	}
 	
-	
 	@Test 
 	public void exigence1() throws Exception {
-		driver.findElement(By.cssSelector(".list-inline>*:nth-child(2)>a")).click();
+        // Charger le compteur depuis le fichier compteur.txt
+        int compteur = chargerCompteur();
+        // Ajouter le compteur aux données
+        String firstName = "test" + compteur;
+        String lastName = "test" + compteur;
+        String email = "test" + compteur + "@test" + compteur + ".com";
+        String telephone = "1234567890";
+        String password = "test" + compteur;
+        // Incrémenter le compteur pour la prochaine exécution
+        compteur++;
+        // Enregistrer le nouveau compteur dans le fichier compteur.txt
+        enregistrerCompteur(compteur);
+        // Votre code restant...
+        driver.findElement(By.cssSelector(".list-inline>*:nth-child(2)>a")).click();
+        Thread.sleep(1000);
 		driver.findElement(By.cssSelector(".dropdown-menu-right>li:first-child>a")).click();
-		driver.findElement(By.id("input-firstname")).sendKeys("Samia");
-		driver.findElement(By.id("input-lastname")).sendKeys("Mouhoubi");
-		driver.findElement(By.id("input-email")).sendKeys("samia.mouhoubi@gmail.com");
-		driver.findElement(By.id("input-telephone")).sendKeys("4385281234");
-		driver.findElement(By.id("input-password")).sendKeys("samiamouhoubi");
-		driver.findElement(By.id("input-confirm")).sendKeys("samiamouhoubi");
+		Thread.sleep(1000);
+		driver.findElement(By.id("input-firstname")).sendKeys(firstName);
+		Thread.sleep(1000);
+		driver.findElement(By.id("input-lastname")).sendKeys(lastName);
+		Thread.sleep(1000);
+		driver.findElement(By.id("input-email")).sendKeys(email);
+		Thread.sleep(1000);
+		driver.findElement(By.id("input-telephone")).sendKeys(telephone);
+		Thread.sleep(1000);
+		driver.findElement(By.id("input-password")).sendKeys(password);
+		Thread.sleep(1000);
+		driver.findElement(By.id("input-confirm")).sendKeys(password);
+		Thread.sleep(1000);
 		driver.findElement(By.name("agree")).click();
+		Thread.sleep(1000);
 		driver.findElement(By.cssSelector(".btn-primary")).click();
-		// post condition : "supprimer compte" ne peut pas être realisée dans le site
-	}
+		Thread.sleep(1000);
+		String msgConfirmationActuel = driver.findElement(By.cssSelector("#content>h1")).getText();
+		String msgConfirmationAttendu = "Your Account Has Been Created!";
+		assertEquals(msgConfirmationActuel, msgConfirmationAttendu);	
+		// post condition : "supprimer compte" ne peut pas être realisé dans le site
+		// aucun moyen de supprimer un compte créé
+    }
 	
-	@Test
+	@Test 
 	public void exigence2() throws Exception {
-		driver.findElement(By.cssSelector(".list-inline>*:nth-child(2)>a")).click();
+        // Charger le compteur depuis le fichier compteur.txt
+        int compteur = chargerCompteur();
+        // Ajouter le compteur aux données
+        String firstName = "test" + compteur;
+        String lastName = "test" + compteur;
+        String email = "test" + compteur + "@test" + compteur + ".com";
+        String telephone = "1234567890";
+        String password = "test" + compteur;
+        // Incrémenter le compteur pour la prochaine exécution
+        compteur++;
+        // Enregistrer le nouveau compteur dans le fichier compteur.txt
+        enregistrerCompteur(compteur);
+        // Votre code restant...
+        driver.findElement(By.cssSelector(".list-inline>*:nth-child(2)>a")).click();
+        Thread.sleep(1000);
 		driver.findElement(By.cssSelector(".dropdown-menu-right>li:first-child>a")).click();
-		driver.findElement(By.id("input-firstname")).sendKeys("Samia");
-		driver.findElement(By.id("input-lastname")).sendKeys("Mouhoubi");
-		driver.findElement(By.id("input-email")).sendKeys("samia.mouhoubi@gmail.com");
-		driver.findElement(By.id("input-telephone")).sendKeys("4385281234");
-		driver.findElement(By.id("input-password")).sendKeys("samiamouhoubi");
-		driver.findElement(By.id("input-confirm")).sendKeys("samiamouhoubi");
+		Thread.sleep(1000);
+		driver.findElement(By.id("input-firstname")).sendKeys(firstName);
+		Thread.sleep(1000);
+		driver.findElement(By.id("input-lastname")).sendKeys(lastName);
+		Thread.sleep(1000);
+		driver.findElement(By.id("input-email")).sendKeys(email);
+		Thread.sleep(1000);
+		driver.findElement(By.id("input-telephone")).sendKeys(telephone);
+		Thread.sleep(1000);
+		driver.findElement(By.id("input-password")).sendKeys(password);
+		Thread.sleep(1000);
+		driver.findElement(By.id("input-confirm")).sendKeys(password);
+		Thread.sleep(1000);
 		driver.findElement(By.name("agree")).click();
+		Thread.sleep(1000);
 		driver.findElement(By.xpath("//input[@name='newsletter' and @value='1']")).click();
+		Thread.sleep(1000);
 		driver.findElement(By.cssSelector(".btn-primary")).click();
-		// post condition : "supprimer compte" ne peut pas être realisée dans le site
-	}
+		Thread.sleep(1000);
+		String msgConfirmationActuel = driver.findElement(By.cssSelector("#content>h1")).getText();
+		String msgConfirmationAttendu = "Your Account Has Been Created!";
+		assertEquals(msgConfirmationActuel, msgConfirmationAttendu);	
+		// post condition : "supprimer compte" ne peut pas être realisé dans le site
+		// aucun moyen de supprimer un compte créé
+    }
 	
 	@Test
 	public void exigence3() throws Exception {
@@ -155,4 +216,28 @@ public class Exigences {
 		// Impossible de continuer a l'étape suivante, 
 		// impossible d'ajouter une methode de paiement
 	}
+	
+	
+	// methode pour charger le compteur de creation de compte (exigences 1 et 2)
+    private int chargerCompteur() throws IOException {
+        File file = new File("compteur.txt");
+        if (!file.exists()) {
+            // Si le fichier n'existe pas, commencer à partir de 2
+            return 2;
+        }
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line = reader.readLine();
+            return Integer.parseInt(line);
+        }
+    }
+
+    //methode pour enregistrer le compteur de creation de compte (exigences 1 et 2)
+    private void enregistrerCompteur(int compteur) throws IOException {
+        File file = new File("compteur.txt");
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            writer.write(String.valueOf(compteur));
+        }
+    }
+	
 }    
