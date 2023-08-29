@@ -19,9 +19,9 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Exigences {
-	
+
 	WebDriver driver;
-	
+
 	@BeforeMethod
 	public void setup() throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
@@ -30,30 +30,30 @@ public class Exigences {
 		driver.get("https://tutorialsninja.com/demo/index.php?route=common/home");
 		Thread.sleep(2000);
 	}
-	
+
 	@AfterMethod
 	public void teardown() throws Exception {
 		Thread.sleep(2000);
 		driver.quit();
 	}
-	
-	@Test 
+
+	@Test
 	public void exigence1() throws Exception {
-        // Charger le compteur depuis le fichier compteur.txt
-        int compteur = chargerCompteur();
-        // Ajouter le compteur aux données
-        String firstName = "test" + compteur;
-        String lastName = "test" + compteur;
-        String email = "test" + compteur + "@test" + compteur + ".com";
-        String telephone = "1234567890";
-        String password = "test" + compteur;
-        // Incrémenter le compteur pour la prochaine exécution
-        compteur++;
-        // Enregistrer le nouveau compteur dans le fichier compteur.txt
-        enregistrerCompteur(compteur);
-        // Votre code restant...
-        driver.findElement(By.cssSelector(".list-inline>*:nth-child(2)>a")).click();
-        Thread.sleep(1000);
+		// Charger le compteur depuis le fichier compteur.txt
+		int compteur = chargerCompteur();
+		// Ajouter le compteur aux données
+		String firstName = "test" + compteur;
+		String lastName = "test" + compteur;
+		String email = "test" + compteur + "@test" + compteur + ".com";
+		String telephone = "1234567890";
+		String password = "test" + compteur;
+		// Incrémenter le compteur pour la prochaine exécution
+		compteur++;
+		// Enregistrer le nouveau compteur dans le fichier compteur.txt
+		enregistrerCompteur(compteur);
+		// Votre code restant...
+		driver.findElement(By.cssSelector(".list-inline>*:nth-child(2)>a")).click();
+		Thread.sleep(1000);
 		driver.findElement(By.cssSelector(".dropdown-menu-right>li:first-child>a")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.id("input-firstname")).sendKeys(firstName);
@@ -74,28 +74,28 @@ public class Exigences {
 		Thread.sleep(1000);
 		String msgConfirmationActuel = driver.findElement(By.cssSelector("#content>h1")).getText();
 		String msgConfirmationAttendu = "Your Account Has Been Created!";
-		assertEquals(msgConfirmationActuel, msgConfirmationAttendu);	
+		assertEquals(msgConfirmationActuel, msgConfirmationAttendu);
 		// post condition : "supprimer compte" ne peut pas être realisé dans le site
 		// aucun moyen de supprimer un compte créé
-    }
-	
-	@Test 
+	}
+
+	@Test
 	public void exigence2() throws Exception {
-        // Charger le compteur depuis le fichier compteur.txt
-        int compteur = chargerCompteur();
-        // Ajouter le compteur aux données
-        String firstName = "test" + compteur;
-        String lastName = "test" + compteur;
-        String email = "test" + compteur + "@test" + compteur + ".com";
-        String telephone = "1234567890";
-        String password = "test" + compteur;
-        // Incrémenter le compteur pour la prochaine exécution
-        compteur++;
-        // Enregistrer le nouveau compteur dans le fichier compteur.txt
-        enregistrerCompteur(compteur);
-        // Votre code restant...
-        driver.findElement(By.cssSelector(".list-inline>*:nth-child(2)>a")).click();
-        Thread.sleep(1000);
+		// Charger le compteur depuis le fichier compteur.txt
+		int compteur = chargerCompteur();
+		// Ajouter le compteur aux données
+		String firstName = "test" + compteur;
+		String lastName = "test" + compteur;
+		String email = "test" + compteur + "@test" + compteur + ".com";
+		String telephone = "1234567890";
+		String password = "test" + compteur;
+		// Incrémenter le compteur pour la prochaine exécution
+		compteur++;
+		// Enregistrer le nouveau compteur dans le fichier compteur.txt
+		enregistrerCompteur(compteur);
+		// Votre code restant...
+		driver.findElement(By.cssSelector(".list-inline>*:nth-child(2)>a")).click();
+		Thread.sleep(1000);
 		driver.findElement(By.cssSelector(".dropdown-menu-right>li:first-child>a")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.id("input-firstname")).sendKeys(firstName);
@@ -118,11 +118,11 @@ public class Exigences {
 		Thread.sleep(1000);
 		String msgConfirmationActuel = driver.findElement(By.cssSelector("#content>h1")).getText();
 		String msgConfirmationAttendu = "Your Account Has Been Created!";
-		assertEquals(msgConfirmationActuel, msgConfirmationAttendu);	
+		assertEquals(msgConfirmationActuel, msgConfirmationAttendu);
 		// post condition : "supprimer compte" ne peut pas être realisé dans le site
 		// aucun moyen de supprimer un compte créé
-    }
-	
+	}
+
 	@Test
 	public void exigence3() throws Exception {
 		driver.findElement(By.cssSelector(".list-inline>*:nth-child(2)>a")).click();
@@ -140,7 +140,7 @@ public class Exigences {
 		String msgAttendu = "Warning: E-Mail Address is already registered!";
 		assertEquals(msgActuel, msgAttendu);
 	}
-	
+
 	@Test
 	public void exigence4() throws Exception {
 		driver.findElement(By.cssSelector(".list-inline>*:nth-child(2)>a")).click();
@@ -153,7 +153,7 @@ public class Exigences {
 		Thread.sleep(2000);
 		assertEquals(urlActuel, urlAttendu);
 	}
-	
+
 	@Test
 	public void exigence5() throws Exception {
 		driver.findElement(By.cssSelector(".list-inline>*:nth-child(2)>a")).click();
@@ -166,7 +166,7 @@ public class Exigences {
 		Thread.sleep(2000);
 		assertEquals(msgActuel, msgAttendu);
 	}
-	
+
 	@Test
 	public void exigence6() throws Exception {
 		driver.findElement(By.cssSelector("[name='search']")).sendKeys("samsung");
@@ -178,7 +178,7 @@ public class Exigences {
 		assertEquals(nomProduitActuel, nomProduitAttendu);
 
 	}
-	
+
 	@Test
 	public void exigence7() throws Exception {
 		driver.findElement(By.cssSelector("[name='search']")).sendKeys("888");
@@ -189,7 +189,7 @@ public class Exigences {
 		Thread.sleep(2000);
 		assertEquals(msgActuel, msgAttendu);
 	}
-	
+
 	@Test
 	public void exigence8() throws Exception {
 		driver.findElement(By.cssSelector(".list-inline>*:nth-child(2)>a")).click();
@@ -213,31 +213,30 @@ public class Exigences {
 		driver.findElement(By.cssSelector("input[type='checkbox']")).click();
 		Thread.sleep(1000);
 		driver.findElement(By.id("button-payment-method")).click();
-		// Impossible de continuer a l'étape suivante, 
+		// Impossible de continuer a l'étape suivante,
 		// impossible d'ajouter une methode de paiement
 	}
-	
-	
+
 	// methode pour charger le compteur de creation de compte (exigences 1 et 2)
-    private int chargerCompteur() throws IOException {
-        File file = new File("compteur.txt");
-        if (!file.exists()) {
-            // Si le fichier n'existe pas, commencer à partir de 2
-            return 2;
-        }
+	private int chargerCompteur() throws IOException {
+		File file = new File("compteur.txt");
+		if (!file.exists()) {
+			// Si le fichier n'existe pas, commencer à partir de 2
+			return 2;
+		}
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            String line = reader.readLine();
-            return Integer.parseInt(line);
-        }
-    }
+		try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+			String line = reader.readLine();
+			return Integer.parseInt(line);
+		}
+	}
 
-    //methode pour enregistrer le compteur de creation de compte (exigences 1 et 2)
-    private void enregistrerCompteur(int compteur) throws IOException {
-        File file = new File("compteur.txt");
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
-            writer.write(String.valueOf(compteur));
-        }
-    }
-	
-}    
+	// methode pour enregistrer le compteur de creation de compte (exigences 1 et 2)
+	private void enregistrerCompteur(int compteur) throws IOException {
+		File file = new File("compteur.txt");
+		try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+			writer.write(String.valueOf(compteur));
+		}
+	}
+
+}
